@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.section{
+   flex: 25%;
+   padding: 0 3px;
+
+}
+img{
+    width: 100%;
+    margin: 1px 0;
+}
+
+@media (max-width: 950px) {
+    .section{
+        flex: 33.333%;
+    }
+}
+
+@media (max-width: 700px) {
+    .section{
+        flex: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    .section{
+        flex: 100%;
+    }
+}
+img:hover{
+    cursor: pointer;
+    animation: rotateScale 1s ease-in ;
+
+  
+}
+@keyframes rotateScale {
+    0% {
+        transform:  scale(1);
+    }
+    50% {
+        transform:  scale(1.1);
+
+    }
+    
+    100% {
+        transform:  scale(1.2);
+
+    }
+    
+}
